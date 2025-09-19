@@ -1,0 +1,5 @@
+{
+  "name": "AI Storyboard Generator",
+  "description": "An application that generates a series of AI images and voiceover scripts from a prompt or script. It maintains character consistency across images, ideal for creating YouTube video storyboards.",
+  "requestFramePermissions": []
+}
