@@ -1,9 +1,14 @@
 import { GoogleGenAI, GenerateContentResponse, Type, Modality } from "@google/genai";
 import type { StoryPlan } from '../types';
 
-if (!process.env.API_KEY) {
-  throw new Error("API_KEY environment variable is not set");
+const apiKey = process.env.API_KEY || import.meta.env.VITE_API_KEY;
+
+if (!apiKey) {
+  throw new Error("API key not found");
 }
+
+const ai = new GoogleGenAI({ apiKey });
+
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
